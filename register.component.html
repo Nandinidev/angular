@@ -1,0 +1,31 @@
+<body>
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form class="box">
+                      <h2>Register here!</h2>
+                      
+                        
+                         <input type="text"  name="name" placeholder="Fullname" [(ngModel)]= "registers.Full_Name">
+                         <input type="text"  name="name" placeholder="Password" [(ngModel)]= "registers.Password">
+                        <input type="email" name="mail" placeholder="Email"  [(ngModel)]="registers.Email" >
+                        <input type="number" name="MobileNumber" placeholder="MobileNumber"  [(ngModel)]="registers.Mobile_Number">
+                        <input placeholder="DateOfBirth" class="textbox-n" name="DateOfBirth" type="text" onfocus="(this.type='date')"
+                         id="date"  [(ngModel)]="registers.Date_of_Birth">
+                        <input type="text" name="City" placeholder="City" [(ngModel)]="registers.City">
+                        <input type="text" name="State" placeholder="State" [(ngModel)]="registers.State">
+                        <input type="text" name="Qualification" placeholder="Qualification" [(ngModel)]="registers.Qualification">
+                        <input type="number" name="YearofCompletion" placeholder="YearofCompletion" [(ngModel)]="registers.Year_of_Completion">      
+                        <button class="button" [routerLink]="'/home'" type="button" value="registers"(click)="insertuser()">
+                        Register
+                        </button>
+                        <router-outlet></router-outlet>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
